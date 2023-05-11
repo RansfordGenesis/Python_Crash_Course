@@ -17,11 +17,15 @@ class Car:
     def increment_odometer(self, miles):
         self.odometer += miles
         
-future_car = Car("New", "BMW", 2023)
+class ElectricCar(Car):
+    
+    def __init__(self, model, name, year):
+        super().__init__(model, name, year)
+        self.battery = 40
+        
+    def describe_battery(self):
+        return f"The battery life is {self.battery}."
+
+future_car = ElectricCar('New', 'BMW', 2023)
 print(future_car.describe_it())
-
-future_car.update_odometer(250)
-print(future_car.read_odometer())
-
-future_car.increment_odometer(120)
-print(future_car.read_odometer())
+print(future_car.describe_battery())
