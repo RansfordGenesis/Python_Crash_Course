@@ -17,11 +17,3 @@ class Car:
     def increment_odometer(self, miles):
         self.odometer += miles
         
-future_car = Car("New", "BMW", 2023)
-print(future_car.describe_it())
-
-future_car.update_odometer(250)
-print(future_car.read_odometer())
-
-future_car.increment_odometer(120)
-print(future_car.read_odometer())
